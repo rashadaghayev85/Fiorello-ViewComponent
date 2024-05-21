@@ -1,4 +1,5 @@
 ﻿using FiorelloMVC.Data;
+using FiorelloMVC.Models;
 using FiorelloMVC.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,9 +13,9 @@ namespace FiorelloMVC.Services
             _context = context;
         }
         
-        public async Task<Dictionary<string, string>> GetAllAsync()
+        public async Task<IEnumerable<SocialMedia>>GetAllAsync()
         {
-            return await _context.SocialMedias.ToDictionaryAsync(m => m.Name, m => m.Url);
+            return await _context.SocialMedias.ToListAsync();
         }
     }
 }

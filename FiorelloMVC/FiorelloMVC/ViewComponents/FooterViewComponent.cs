@@ -17,7 +17,7 @@ namespace FiorelloMVC.ViewComponents
         {
             var datas = new FooterVMVC
             {
-                SocialMedias= (IEnumerable<SocialMedia>)await _socialMediaService.GetAllAsync(),
+                SocialMedias=await _socialMediaService.GetAllAsync(),
                 Settings=await _settingService.GetAllAsync(),
             };
 

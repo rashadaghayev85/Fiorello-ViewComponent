@@ -17,6 +17,7 @@ builder.Services.AddScoped<IExpertService, ExpertService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ISettingService, SettingService>();
+builder.Services.AddScoped<ISocialMediaService, SocialMediaService>();
 
 var app = builder.Build();
 

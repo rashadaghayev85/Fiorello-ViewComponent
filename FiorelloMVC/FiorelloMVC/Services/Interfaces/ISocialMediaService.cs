@@ -1,7 +1,9 @@
-﻿namespace FiorelloMVC.Services.Interfaces
+﻿using FiorelloMVC.Models;
+
+namespace FiorelloMVC.Services.Interfaces
 {
     public interface ISocialMediaService
     {
-        Task<Dictionary<string, string>> GetAllAsync();
+        Task<IEnumerable<SocialMedia>>GetAllAsync();
     }
 }
